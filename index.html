@@ -8,31 +8,42 @@
 </head>
 <body>
   <div class="container">
-    <h1>🌸 Selamat Ulang Tahun, Vania 🌸</h1>
-    <h2>Ke-15 Tahun 🎉</h2>
-    <p class="intro">Semoga di usia yang baru ini, kamu selalu diberikan kesehatan, kebahagiaan, dan kesuksesan dalam hidup. Terus menjadi pribadi yang ceria, baik hati, dan menginspirasi semua orang di sekitarmu 🤍</p>
+    <h1>🌸 Happy Birthday, Vania 🌸</h1>
+    <h2>15 Tahun, My Best Friend 💖</h2>
+    <p class="intro">
+      Di hari spesial ini, aku cuma ingin bilang: makasih udah jadi teman yang selalu ada,
+  yang penuh semangat dan bikin hari-hari jadi lebih seru.  
+  Semoga di umur yang baru ini, kamu selalu sehat, bahagia, dan semua impianmu tercapai ya!
+  Teruslah jadi Vania yang ceria, baik hati, dan inspiratif 💐
+    </p>
 
     <div class="gallery">
-  <h3>📸 Vanoyyy</h3>
-  <div class="photo-collage">
-    <img src="image/1.jpg" alt="Foto 1" class="img-small top-left" />
-    <img src="image/2.jpg" alt="Foto 2" class="img-small top-right" />
-    <img src="image/5.jpg" alt="Foto Utama" class="img-main center" />
-    <img src="image/3.jpg" alt="Foto 4" class="img-small bottom-left" />
-    <img src="image/4.jpg" alt="Foto 5" class="img-small bottom-right" />
-  </div>
-</div>
-
+      <h3>💗 Vanoyyy 💗</h3>
+      <div class="photo-collage">
+        <img src="image/1.jpg" alt="Foto 1" class="img-small top-left" />
+        <img src="image/2.jpg" alt="Foto 2" class="img-small top-right" />
+        <img src="image/5.jpg" alt="Foto Utama" class="img-main center" />
+        <img src="image/3.jpg" alt="Foto 3" class="img-small bottom-left" />
+        <img src="image/4.jpg" alt="Foto 4" class="img-small bottom-right" />
+      </div>
+    </div>
 
     <div class="quote">
-      <em>"Semua mimpi bisa tercapai jika kamu percaya pada dirimu sendiri."</em>
+      <em>“Tidak perlu kata-kata yg penting bukti nyata” 🌷</em>
     </div>
 
     <footer>
-      Dibuat dengan 💩
+      Dibuat dengan penuh 💩
     </footer>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const mainImg = document.querySelector(".img-main");
+      mainImg.addEventListener("click", () => {
+        mainImg.classList.toggle("active");
+      });
+    });
+  </script>
 </body>
 </html>
