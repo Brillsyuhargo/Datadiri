@@ -86,17 +86,6 @@ footer {
   }
 }
 
-@keyframes popUp {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
 .photo-collage {
   position: relative;
   width: 100%;
@@ -117,7 +106,7 @@ footer {
   transform: scale(1.05) rotate(1deg);
 }
 
-/* Posisi & ukuran */
+/* Ukuran */
 .img-small {
   width: 140px;
   height: 140px;
@@ -127,12 +116,10 @@ footer {
   width: 200px;
   height: 200px;
   z-index: 10;
-  cursor: pointer; /* Biar kelihatan bisa diklik */
-  transition: transform 0.3s ease;
+  transform: rotate(-5deg);
 }
 
-
-/* Posisi foto */
+/* Posisi */
 .top-left {
   top: 0;
   left: 0;
@@ -159,6 +146,13 @@ footer {
   right: 20px;
 }
 
+/* Efek klik utama */
+.img-main.active {
+  transform: scale(1.2) rotate(0deg) !important;
+  z-index: 20;
+}
+
+/* Responsif */
 @media (max-width: 600px) {
   .photo-collage {
     height: auto;
@@ -166,17 +160,19 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    padding: 10px;
   }
 
   .photo-collage img {
-    position: static;
+    position: static !important;
     width: 45%;
     height: auto;
     transform: none !important;
   }
 
   .img-main {
-    width: 90%;
+    width: 100%;
+    height: auto;
     margin-top: 10px;
   }
 }
