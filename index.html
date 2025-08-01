@@ -2,48 +2,42 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Selamat Ulang Tahun Vania!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brillian - Home</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>🌸 Happy Birthday, Vania 🌸</h1>
-    <h2>15 Tahun, My Best Friend 💖</h2>
-    <p class="intro">
-      Di hari spesial ini, aku cuma ingin bilang: makasih udah jadi teman yang selalu ada,
-  yang penuh semangat dan bikin hari-hari jadi lebih seru.  
-  Semoga di umur yang baru ini, kamu selalu sehat, bahagia, dan semua impianmu tercapai ya!
-  Teruslah jadi Vania yang ceria, baik hati, dan inspiratif 💐
-    </p>
+  <nav class="navbar">
+    <div class="logo">Portofolio<span></span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="abaout.html">About</a></li>
+      <li><a href="my_project.html">Project</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <div class="gallery">
-      <h3>💗 Vanoyyy 💗</h3>
-      <div class="photo-collage">
-        <img src="image/1.jpg" alt="Foto 1" class="img-small top-left" />
-        <img src="image/2.jpg" alt="Foto 2" class="img-small top-right" />
-        <img src="image/5.jpg" alt="Foto Utama" class="img-main center" />
-        <img src="image/3.jpg" alt="Foto 3" class="img-small bottom-left" />
-        <img src="image/4.jpg" alt="Foto 4" class="img-small bottom-right" />
-      </div>
-    </div>
+  <header class="hero">
+    <h1>Hi, I'm <span class="highlight">Brillian Aditya Suhargo</span></h1>
+    <p><span id="typing-text"></span><span class="cursor">|</span></p>
+  </header>
 
-    <div class="quote">
-      <em>“Tidak perlu kata-kata yg penting bukti nyata” 🌷</em>
-    </div>
-
-    <footer>
-      Dibuat dengan penuh 💩
-    </footer>
-  </div>
+  <footer><p>&copy; 2025 Brillian Aditya Suhargo</p></footer>
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const mainImg = document.querySelector(".img-main");
-      mainImg.addEventListener("click", () => {
-        mainImg.classList.toggle("active");
-      });
-    });
+    const texts = ["Frontend Developer", "Mobile Developer", "UI Designer"];
+    let count = 0, index = 0, currentText = '', letter = '';
+    function type() {
+      if (count === texts.length) count = 0;
+      currentText = texts[count];
+      letter = currentText.slice(0, ++index);
+      document.getElementById('typing-text').textContent = letter;
+      if (letter.length === currentText.length) {
+        count++; index = 0;
+        setTimeout(type, 1500);
+      } else setTimeout(type, 100);
+    }
+    type();
   </script>
 </body>
 </html>
