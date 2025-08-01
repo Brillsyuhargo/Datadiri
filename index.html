@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <nav class="navbar">
-    <div class="logo">Portofolio<span></span></div>
+    <div class="logo">Portofolio<span>.</span></div>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a class="active" href="index.html">Home</a></li>
       <li><a href="abaout.html">About</a></li>
       <li><a href="my_project.html">Project</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -18,8 +19,15 @@
   </nav>
 
   <header class="hero">
-    <h1>Hi, I'm <span class="highlight">Brillian Aditya Suhargo</span></h1>
-    <p><span id="typing-text"></span><span class="cursor">|</span></p>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Hi, My Name is <span class="highlight"><br>Brillian Suhargo</span></h1>
+        <p><span id="typing-text"></span><span class="cursor">|</span></p>
+      </div>
+      <div class="hero-image">
+        <img src="image/profile.jpg" alt="Foto Brillian" />
+      </div>
+    </div>
   </header>
 
   <footer><p>&copy; 2025 Brillian Aditya Suhargo</p></footer>
@@ -39,5 +47,6 @@
     }
     type();
   </script>
+
 </body>
 </html>
