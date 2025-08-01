@@ -8,15 +8,20 @@
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="logo">Portofolio<span>.</span></div>
-    <ul class="nav-links">
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="abaout.html">About</a></li>
-      <li><a href="my_project.html">Project</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+<nav class="navbar">
+  <div class="logo">Portofolio<span>.</span></div>
+
+  <!-- Tombol menu di HP -->
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="abaout.html">About</a></li>
+    <li><a href="my_project.html">Project</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
 
   <header class="hero">
     <div class="hero-content">
@@ -47,6 +52,14 @@
     }
     type();
   </script>
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>

@@ -7,15 +7,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">My Project</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="abaout.html">About</a></li>
-      <li><a href="my_project.html" class="active">Project</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+   <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="abaout.html">About</a></li>
+    <li><a href="my_project.html">Project</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
   <!-- JANGAN tambahkan .container jika section sudah di-style -->
   <section class="section">
@@ -50,5 +50,14 @@
   <footer>
     <p>&copy; 2025 Brillian Aditya Suhargo</p>
   </footer>
+  <script>
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
 </body>
 </html>
