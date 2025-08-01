@@ -426,7 +426,22 @@ footer {
 }
 
 /* Mode potret/mobile */
-@media screen and (max-width: 600px) {
+/* Tambahan khusus untuk menu toggle */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #ffa500;
+}
+
+/* Saat layar kecil (mode potret / max 768px) */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* Tetap sejajar */
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .menu-toggle {
     display: block;
   }
@@ -434,21 +449,13 @@ footer {
   .nav-links {
     display: none;
     flex-direction: column;
+    gap: 1rem;
     width: 100%;
-    background-color: #161b22;
-    padding: 1rem 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    border-top: 1px solid #30363d;
+    margin-top: 1rem;
   }
 
   .nav-links.active {
     display: flex;
   }
-
-  .nav-links li a {
-    padding: 0.8rem 0;
-    display: block;
-  }
 }
+
